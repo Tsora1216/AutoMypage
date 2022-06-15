@@ -24,7 +24,7 @@ options = webdriver.ChromeOptions()
 #シークレットモードの場合の指定
 options.add_argument('incognito')
 options.add_experimental_option("excludeSwitches", ['enable-automation']);
-chrome_service = fs.Service(executable_path='C:\driver\chromedriver.exe')
+chrome_service = fs.Service(executable_path='./driver/chromedriver.exe')
 chrome_service.creationflags = CREATE_NO_WINDOW
 serv = Service(ChromeDriverManager().install())#driverの自動更新
 driver = webdriver.Chrome(service=serv, options=options)
