@@ -31,10 +31,6 @@ wait = WebDriverWait(driver, 10)#タイムアウト時間の設定
 
 def xpath_click(driver,xpath):
     driver.find_element(By.XPATH, xpath).click()
-    
-def xpath_write(driver,xpath,moji):
-    driver.find_element(By.XPATH, xpath).send_keys(moji)
-
 
    
 #######################################
@@ -51,4 +47,19 @@ info_df = df["あなたの情報"]
 
 #######################################
 
+#動画で見やすいように遅延処理
+time.sleep(1)
 driver.get(company_df["アカウント作成"]["三井ホーム"])
+
+time.sleep(1)
+xpath_click(driver,'//*[@id="first_access"]')#
+
+time.sleep(1)
+xpath_click(driver,'/html/body/div[1]/div[3]/div[2]/div[4]/p[1]/a')#
+
+time.sleep(1)
+xpath_write(driver,'/html/body/div[1]/div[3]/div[2]/form/dl/div[2]/dd/span/span[1]/div/div',info_df["あなたの情報"]["名前（上）"])
+
+#終了
+time.sleep(5)
+exit()
