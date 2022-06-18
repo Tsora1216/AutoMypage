@@ -1,0 +1,364 @@
+<h1>0.概要・自己紹介</h1>
+<p>私は東京電機大学の工学部、情報通信工学科に所属している、高矢空です。
+
+普段は大学でプログラミングとデータ分析、ビジネス基礎などを中心に学習しています。
+現在(2022/06)は研究室に未所属ですが、教授に見てもらって、データ分析の練習を事前に行い、研究室に入った時にはもうテーマが決まり、即実験できる環境を実現しようと考えています。
+
+その大学生活で得る学びの中でも<b>自動化プログラミング</b>が好きです！
+理由としては、圧倒的に作業量を減らし、効率化によって人の役に立つことができるから！
+
+本日2022年6月16日から世の中の課題の課題を発見したため、その課題解決に取り組んでいこうと思います。
+つたない文章ですが、一生懸命書きますので、最後までご閲覧していただけたら嬉しいです。
+
+どうぞよろしくお願いします。
+
+
+東京電機大学　工学部　情報通信工学科　高矢空
+
+
+
+</p>
+<h1>私の就職活動の軸</h1>
+<p>
+現在サマーインターンの情報が解禁され、様々な企業を見た中で、就活の軸をしっかりと定めて、私は数社にしっかりと絞った。私が申し込んだ企業の中でもしっかりと見た場所は以下の点である。
+<ul>
+<li>企業理念</li>
+<li>事業内容</li>
+<li>過去のインターン生の口コミ</li>
+<li>入社した後のギャップ口コミ</li>
+<li>退社した社員さんの退社理由</li>
+<li>IRから読み取れる経済状況</li>
+<li>これからの企業の伸びや事業の展望</li>
+</ul>
+以上のことを見た上で自分に合っている企業をピックアップしている。<br>
+その中でもさらに就活の軸としている点が2点ある。
+
+<ol>
+<li>目標とできる人がいるか</li>
+<li>成長できる環境かどうか</li>
+<li>お互いが高めあう環境にあるか</li>
+</ol>
+を見極めるためにインターンに参加し、実際の雰囲気や社員の方々の対応を見てより絞って自分の人生を大きく左右する会社決定をしたい。
+
+<h1>解決するべき課題</h1>
+友人が、就活を現在とても頑張っている。
+
+彼は興味の幅がとても広く、約60社程度の会社にプレエントリーをしてマイページ登録をしているようだ。
+「マイページの登録だけで半日が過ぎ、それぞれの企業の企業理念とか事業なんて見てられない。」
+と言っていました。
+
+さらに私の兄も就活の時、はじめはマイページの登録だけで重すぎる。同じことを何度も聞かれてつらいし、時間の無駄では？とも思ってしまう。とのことだ。
+
+これらの私の身近な声から、これでは、本末転倒ではないだろうか？と考えた。
+就職活動に熱を入れているのに、結局自分が選んでいる会社は適当。
+数多くを見ていて、自分の人生を大きく左右するのに登録だけで回りが見えていない。
+これは確かに締め切りというものが存在し、時間に追われているというのも大きな要因だと考えた。
+
+そのため、マイページの自動化が大きく力を発揮し、本人に時間的余裕を与ることができ、就活をより意味に割く時間をより意味あるものに変えられるだろうと考えた。
+</p>
+
+<h1>既存商品との差別化</h1>
+<P>
+もちろんこの課題に気づいた時には、先人の優秀な方々が作っているのではないだろうかと調べると2点ほど類似しているものが見つかった。
+
+まず一点目は、<b>ロボフォーム</b>という商品。
+こちらは有料で完成度が高い。有料版だとスマホでも操作が可能になる。
+また、無料版でも使用可能。
+しかし、アメリカで開発されたものであるため、英語版のみ。
+また、Classで判別しているのか、たまに反応しないことがある。
+
+次に二点目、<b>イッカツ</b>という商品。
+こちらは、もうすでに商品の公開が終了していた。
+そのためリンクも切れていて、導入することは不可能になっていた。
+
+最後に三点目、<b>AUTOFILL</b>というchromeの拡張機能
+こちらは、完全無料で、Classを自分で記入し、そのClassが存在するサイトにジャンプすると自動で入力するという仕組みになっている。しかし、この拡張機能を利用することで別サイトなどでも入力されてしまい、意図しない状況でも起動してしまうという難点もある。
+
+以上の3点の商品が既存の市場に出回っている。
+その中でも使用している人が、私の学内では一人もいないという点。
+これから、あまり広報されていない。
+ということもわかる。
+
+私はそれぞれの商品に対して差別化として、以下の点を開発企画段階で盛り込む点として考案したい。
+<ul>
+<li>日本語対応</li>
+<li>初期設定は一回のみで楽</li>
+<li>さまざまなサイトに完全対応</li>
+<li>ドロップダウンリストやラジオボタンにも対応</li>
+<li>ご入力や未反応などのよくあるバグを徹底的に減らす</li>
+</ul>
+
+以上の点を踏まえて、入力画面を完全に自動化する。
+そして確認画面で確認ボタンを押すだけ。
+というのが私の理想です。
+</p>
+
+<h1>開発</h1>
+<p>
+今回の開発では、就職先でチーム開発をするとき、チーム共有ツールに慣れていたいため、使用すると考えられるGithubを使用してみようと考えています。
+
+早速リポジトリを作成してみた。
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2502107/1f6946da-87a2-7193-8c8b-31c4dd5132eb.png)
+以前から友人とAtCoderのコードを見せ合うなどして、プログラミングを共有していたので少し使用している。
+
+現在は使用率が一番高いのはchromeのようだ。
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Internet Explorerが明日までの命ですが、全盛期を振り返ってみましょう。<br><br> <a href="https://t.co/0ClUf1gANf">pic.twitter.com/0ClUf1gANf</a></p>&mdash; うめめ🔛ITエンジニャー🗯 (@beConjuror) <a href="https://twitter.com/beConjuror/status/1536860160224014336?ref_src=twsrc%5Etfw">June 14, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+これより、今回はWebの自動化では、chromeを使用していこうと考えています。
+のちのち、ほかの検索エンジンにも対応する予定です。
+また、Internet Explorerに対応させるかは、未定です。
+
+使用する言語はPythonです。
+早速開発に取り組んでいきたいと思います。
+
+<h1>コーディング</h1>
+私はスモールステップでしっかり着実に進めていくのが好きなので、確実な歩みを実現できたらいいなと思います。
+
+早速Webの自動化のための初期段階として、Chrome Driverを用いて、Googleのホームページを表示してみようと思います。
+```python:AutoMypage-Step001
+from selenium import webdriver
+from selenium.webdriver import ChromeOptions
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome import service as fs
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver import Chrome
+from subprocess import CREATE_NO_WINDOW
+
+options = webdriver.ChromeOptions()
+#ヘッドレスモードの場合指定
+#options.add_argument('headless')
+#シークレットモードの場合の指定
+options.add_argument('incognito')
+options.add_experimental_option("excludeSwitches", ['enable-automation']);
+chrome_service = fs.Service(executable_path='./driver/chromedriver.exe')
+chrome_service.creationflags = CREATE_NO_WINDOW
+serv = Service(ChromeDriverManager().install())#driverの自動更新
+driver = webdriver.Chrome(service=serv, options=options)
+
+driver.get("https://www.google.com/")
+```
+AutoMypage-Step001の実行結果
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KbJX38iZieE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+以上のことから、WebDriverを用いて、chromeを制御できたことがわかります。
+
+次に、企業を管理する際にデータベースのようなものが必要になると考えています。
+ローカルで簡易的に編集できるものがよいと考えているので、Excelファイルを選択しました。その他の理由としては、ローカルになじみのあるファイルがあり、それを編集することで編集・追加などを容易に行うことができるようにしたいと考えています。
+
+また、csvファイルを選ばなかったのにも理由があります。それはIDやPassWordの保存方法にデメリットがあるからです。例えば「000111000」というIDを保存すると、「111000」として保存されてしまいます。
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2502107/1d20f3b4-fdb6-d553-db14-2fe3237cc60a.png)
+↓Enterを押すと↓
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2502107/ad7f24b2-b993-4e83-2cf5-ae2d4a6fe9d8.png)
+
+以上のことから、データの保持方法に、csvファイルではなく、Excelファイルを選択しました。
+
+ExcelファイルのソースをPandasで読み取り、整形しやすい状態でデータを取り出すことができるか、次は試してみたい。
+
+そのため、次に実装したいことは以下の3点
+<ul>
+<li>Excelデータをpdに渡す</li>
+<li>pdでのデータ出力</li>
+<li>それらのデータの中から実際にURLに飛ぶ</li>
+<ul>
+※すでに興味のある企業さんはマイページ登録が完了してしまっていることから、親族が所属している会社でマイページ作成を行って生きたい。
+
+```python:AutoMypage-Step002
+from selenium import webdriver
+from selenium.webdriver import ChromeOptions
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome import service as fs
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver import Chrome
+from subprocess import CREATE_NO_WINDOW
+
+import time
+import openpyxl
+import pandas as pd
+import xlrd
+import os
+import webbrowser
+
+options = webdriver.ChromeOptions()
+#ヘッドレスモードの場合指定
+#options.add_argument('headless')
+#シークレットモードの場合の指定
+options.add_argument('incognito')
+options.add_experimental_option("excludeSwitches", ['enable-automation']);
+chrome_service = fs.Service(executable_path='./driver/chromedriver.exe')
+chrome_service.creationflags = CREATE_NO_WINDOW
+serv = Service(ChromeDriverManager().install())#driverの自動更新
+driver = webdriver.Chrome(service=serv, options=options)
+wait = WebDriverWait(driver, 10)#タイムアウト時間の設定
+
+#######################################
+#CSVファイルの読み込み
+dirname = os.getcwd()
+df = pd.read_excel('./site.xlsx', sheet_name=["会社", "あなたの情報"],header=0,index_col=0)
+df1 = df["会社"]
+
+company_df =  df["会社"]
+info_df = df["あなたの情報"]
+
+#print(company_df["ホームページ"]["三井ホーム"])
+#print(info_df["あなたの情報"]["名前（上）"])
+
+#######################################
+
+driver.get(company_df["アカウント作成"]["三井ホーム"])
+```
+AutoMypage-Step002の実行結果
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Fck-sAADJZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+以上のことから、Excelのデータをpandasで処理し、URLを抽出することができた。
+
+次のステップではURLを開き終わったので、実際にWeb上の要素を用いて、自動化を行っていきたい。
+そのため、今回は、XpathとClassを用いて、要素を指定し、SeleniumのDriverに渡してあげて、そこからそれぞれの要素にアクションを起こすようなプログラミングを組みたい。
+そのためにクリックアクションの関数を作成し、実際に動作が可能か確認をしてみたい。
+さらに遷移後の状態も動画でしっかり確認したいため、Sleep機能を使用して、画面の遷移をわかりやすくしました。
+
+```Python:AutoMypage-Step003
+from selenium import webdriver
+from selenium.webdriver import ChromeOptions
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome import service as fs
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver import Chrome
+from subprocess import CREATE_NO_WINDOW
+
+import time
+import openpyxl
+import pandas as pd
+import xlrd
+import os
+import webbrowser
+
+options = webdriver.ChromeOptions()
+#ヘッドレスモードの場合指定
+#options.add_argument('headless')
+#シークレットモードの場合の指定
+options.add_argument('incognito')
+options.add_experimental_option("excludeSwitches", ['enable-automation']);
+chrome_service = fs.Service(executable_path='./driver/chromedriver.exe')
+chrome_service.creationflags = CREATE_NO_WINDOW
+serv = Service(ChromeDriverManager().install())#driverの自動更新
+driver = webdriver.Chrome(service=serv, options=options)
+wait = WebDriverWait(driver, 10)#タイムアウト時間の設定
+
+def xpath_click(driver,xpath):
+    driver.find_element(By.XPATH, xpath).click()
+   
+#######################################
+#CSVファイルの読み込み
+dirname = os.getcwd()
+df = pd.read_excel('./site.xlsx', sheet_name=["会社", "あなたの情報"],header=0,index_col=0)
+df1 = df["会社"]
+
+company_df =  df["会社"]
+info_df = df["あなたの情報"]
+
+#print(company_df["ホームページ"]["三井ホーム"])
+#print(info_df["あなたの情報"]["名前（上）"])
+
+#######################################
+
+#動画で見やすいように遅延処理
+time.sleep(1)
+driver.get(company_df["アカウント作成"]["三井ホーム"])
+
+time.sleep(1)
+xpath_click(driver,'//*[@id="first_access"]')#
+
+time.sleep(1)
+xpath_click(driver,'/html/body/div[1]/div[3]/div[2]/div[4]/p[1]/a')#
+
+time.sleep(5)
+
+exit()
+
+
+```
+AutoMypage-Step003の実行結果
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IRH5y7KnNDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+以上のことから、Webの自動化にめどが立っていることがわかります。
+ここからはこれらの技術を駆使して自動化を行っていきます。
+
+次は、クリックに成功したのでフォームに書き込みを行っていきたい。
+早速取り掛かります。
+
+```Python:AutoMypage-Step004
+
+```
+AutoMypage-Step004の実行結果
+
+
+
+```Python:AutoMypage-Step005
+```
+AutoMypage-Step005の実行結果
+
+```Python:AutoMypage-Step006
+```
+AutoMypage-Step006の実行結果
+
+```Python:AutoMypage-Step007
+```
+AutoMypage-Step007の実行結果
+
+
+</p>
+
+
+
+
+
+<h1>参考にさせていただいたサイト</h1>
+
+
+<h2>技術的にプログラミング制作で参考にさせていただいたサイト</h2>
+<p>
+
+[PythonのSelenium 4でブラウザを操作するRPAを作成](https://ict-worker.com/skill/python-rpa/python-selenium.html#XPath_CSS)
+[テキストボックスの値をJavaScriptを使って取得・設定する](https://www.javadrive.jp/javascript/form/index1.html)
+[ドロップダウンメニューの値をJavaScriptを使って取得・設定する](https://www.javadrive.jp/javascript/form/index5.html)
+[https://9-bb.com/photoshop-5/](https://9-bb.com/photoshop-5/)
+[]()
+[]()
+</p>
+
+
+
+<h2>このQiitaの記事を書くために参考にさせていただいたサイト</h2>
+<p>
+
+[Markdown記法 チートシート](https://qiita.com/Qiita/items/c686397e4a0f4f11683d)
+[bタグとstrongタグの書き方！](https://techacademy.jp/magazine/12592)
+[HTMLでリストを使う方法](https://techacademy.jp/magazine/5712)
+[Qiita Markdown 書き方 まとめ](https://qiita.com/shizuma/items/8616bbe3ebe8ab0b6ca1)
+[]()
+[]()
+[]()
+[]()
+</p>
+
+<h2>プログラミング制作に対する調査に用いたサイト</h2>
+<p>
+
+[就職活動で便利な自動入力ツール](http://kigyokenkyu.blog.fc2.com/blog-entry-1749.html)
+[就活で便利な自動入力ソフト](https://ameblo.jp/syukatu-2012/entry-11093812105.html)
+[新卒マイページ作成での自動入力の仕方](https://kagakumaker.com/archives/79)
+[]()
+[]()
+[]()
+</p>
