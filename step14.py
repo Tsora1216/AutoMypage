@@ -68,24 +68,35 @@ xpath_click(driver,'//*[@id="first_access"]')#
 xpath_click(driver,'/html/body/div[1]/div[3]/div[2]/div[4]/p[1]/a')#
 #xpath_write(driver,'/html/body/div[1]/div[3]/div[2]/form/dl/div[2]/dd/span/span[1]/div/div',info_df["あなたの情報"]["名前（上）"])
 
-def javascript_write(driver,JSpath,Yourinfo):
+def javascript_textbox_write(driver,JSpath,Yourinfo):
     script = """
         const element = """+JSpath+";"+"""
         element.value = \""""+Yourinfo+"\";"
     driver.execute_script(script)
 
+
 Javascript_path='document.querySelector("body > div.wrap > div.container.clearfix.formrap > div.contents_area > form > dl > div:nth-child(2) > dd > span > span:nth-child(1) > div > div > div > input")'
-javascript_write(driver,Javascript_path,info_df["あなたの情報"]["名前（上）"])
+javascript_textbox_write(driver,Javascript_path,info_df["あなたの情報"]["名前（上）"])
 
 Javascript_path='document.querySelector("body > div.wrap > div.container.clearfix.formrap > div.contents_area > form > dl > div:nth-child(2) > dd > span > span:nth-child(2) > div > div > div > input")'
-javascript_write(driver,Javascript_path,info_df["あなたの情報"]["名前（下）"])
+javascript_textbox_write(driver,Javascript_path,info_df["あなたの情報"]["名前（下）"])
 
 Javascript_path='document.querySelector("body > div.wrap > div.container.clearfix.formrap > div.contents_area > form > dl > div:nth-child(3) > dd > span > span:nth-child(1) > div > div > div > input")'
-javascript_write(driver,Javascript_path,info_df["あなたの情報"]["フリガナ（上）"])
+javascript_textbox_write(driver,Javascript_path,info_df["あなたの情報"]["フリガナ（上）"])
 
 Javascript_path='document.querySelector("body > div.wrap > div.container.clearfix.formrap > div.contents_area > form > dl > div:nth-child(3) > dd > span > span:nth-child(2) > div > div > div > input")'
-javascript_write(driver,Javascript_path,info_df["あなたの情報"]["フリガナ（下）"])
+javascript_textbox_write(driver,Javascript_path,info_df["あなたの情報"]["フリガナ（下）"])
 
+'''
+script = """
+    driver.execute_script(script)
+    let element = document.getElementById('myselect');
+    let options = element.options;
+    options[1].selected = true;
+"""
+
+driver.execute_script(script)
+'''
 
 
 time.sleep(5)
