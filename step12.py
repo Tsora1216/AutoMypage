@@ -48,29 +48,47 @@ info_df = df["あなたの情報"]
 #print(info_df["あなたの情報"]["名前（上）"])
 
 #######################################
+#CSVファイルの読み込み
+dirname = os.getcwd()
+df = pd.read_excel('./site.xlsx', sheet_name=["会社", "あなたの情報"],header=0,index_col=0)
+df1 = df["会社"]
 
-#動画で見やすいように遅延処理
-time.sleep(1)
+company_df =  df["会社"]
+info_df = df["あなたの情報"]
+
+#print(company_df["ホームページ"]["三井ホーム"])
+#print(info_df["あなたの情報"]["名前（上）"])
+
+#######################################
+
 driver.get(company_df["アカウント作成"]["三井ホーム"])
 
-time.sleep(1)
+
 xpath_click(driver,'//*[@id="first_access"]')#
-
-time.sleep(1)
 xpath_click(driver,'/html/body/div[1]/div[3]/div[2]/div[4]/p[1]/a')#
+#xpath_write(driver,'/html/body/div[1]/div[3]/div[2]/form/dl/div[2]/dd/span/span[1]/div/div',info_df["あなたの情報"]["名前（上）"])
 
-time.sleep(1)
-xpath_write(driver,'/html/body/div[1]/div[3]/div[2]/form/dl/div[2]/dd/span/span[1]/div/div/div/input',info_df["あなたの情報"]["名前（上）"])
+script = """
+    const element = document.querySelector("body > div.wrap > div.container.clearfix.formrap > div.contents_area > form > dl > div:nth-child(2) > dd > span > span:nth-child(1) > div > div > div > input");
+    element.value = \""""+info_df["あなたの情報"]["名前（上）"]+"\";"
+driver.execute_script(script)
 
-time.sleep(1)
-xpath_write(driver,'/html/body/div[1]/div[3]/div[2]/form/dl/div[2]/dd/span/span[2]/div/div/div/input',info_df["あなたの情報"]["名前（下）"])
+script = """
+    const element = document.querySelector("body > div.wrap > div.container.clearfix.formrap > div.contents_area > form > dl > div:nth-child(2) > dd > span > span:nth-child(2) > div > div > div > input");
+    element.value = \""""+info_df["あなたの情報"]["名前（下）"]+"\";"
+driver.execute_script(script)
 
-time.sleep(1)
-xpath_write(driver,'/html/body/div[1]/div[3]/div[2]/form/dl/div[3]/dd/span/span[1]/div/div/div/input',info_df["あなたの情報"]["フリガナ上"])
+script = """
+    const element = document.querySelector("body > div.wrap > div.container.clearfix.formrap > div.contents_area > form > dl > div:nth-child(3) > dd > span > span:nth-child(1) > div > div > div > input");
+    element.value = \""""+info_df["あなたの情報"]["フリガナ（上）"]+"\";"
+driver.execute_script(script)
 
-time.sleep(1)
-xpath_write(driver,'/html/body/div[1]/div[3]/div[2]/form/dl/div[3]/dd/span/span[2]/div/div/div/input',info_df["あなたの情報"]["フリガナ下"])
+script = """
+    const element = document.querySelector("body > div.wrap > div.container.clearfix.formrap > div.contents_area > form > dl > div:nth-child(3) > dd > span > span:nth-child(2) > div > div > div > input");
+    element.value = \""""+info_df["あなたの情報"]["フリガナ（下）"]+"\";"
+driver.execute_script(script)
 
-#終了
+
+
 time.sleep(5)
 exit()
