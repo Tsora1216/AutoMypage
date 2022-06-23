@@ -298,15 +298,182 @@ AutoMypage-Step003の実行結果
 早速取り掛かります。
 
 ```Python:AutoMypage-Step004
+from selenium import webdriver
+from selenium.webdriver import ChromeOptions
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome import service as fs
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver import Chrome
+from subprocess import CREATE_NO_WINDOW
 
+import time
+import openpyxl
+import pandas as pd
+import xlrd
+import os
+import webbrowser
+
+options = webdriver.ChromeOptions()
+#ヘッドレスモードの場合指定
+#options.add_argument('headless')
+#シークレットモードの場合の指定
+options.add_argument('incognito')
+options.add_experimental_option("excludeSwitches", ['enable-automation']);
+chrome_service = fs.Service(executable_path='./driver/chromedriver.exe')
+chrome_service.creationflags = CREATE_NO_WINDOW
+serv = Service(ChromeDriverManager().install())#driverの自動更新
+driver = webdriver.Chrome(service=serv, options=options)
+wait = WebDriverWait(driver, 10)#タイムアウト時間の設定
+
+def xpath_click(driver,xpath):
+    driver.find_element(By.XPATH, xpath).click()
+    
+def xpath_write(driver,xpath,moji):
+    driver.find_element(By.XPATH, xpath).send_keys(moji)
+    
+#######################################
+#CSVファイルの読み込み
+dirname = os.getcwd()
+df = pd.read_excel('./site.xlsx', sheet_name=["会社", "あなたの情報"],header=0,index_col=0)
+df1 = df["会社"]
+
+company_df =  df["会社"]
+info_df = df["あなたの情報"]
+
+#print(company_df["ホームページ"]["三井ホーム"])
+#print(info_df["あなたの情報"]["名前（上）"])
+
+#######################################
+
+#動画で見やすいように遅延処理
+time.sleep(1)
+driver.get(company_df["アカウント作成"]["三井ホーム"])
+
+time.sleep(1)
+xpath_click(driver,'//*[@id="first_access"]')#
+
+time.sleep(1)
+xpath_click(driver,'/html/body/div[1]/div[3]/div[2]/div[4]/p[1]/a')#
+
+time.sleep(1)
+xpath_write(driver,'/html/body/div[1]/div[3]/div[2]/form/dl/div[2]/dd/span/span[1]/div/div',info_df["あなたの情報"]["名前（上）"])
+
+#終了
+time.sleep(5)
+exit()
 ```
 AutoMypage-Step004の実行結果
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AhTw46PeKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ここで初めて足止めを食らいました。<b><font color="Red">失敗</font></b>です。<br>
+この動画から、クリックには成功しましたが、書き込みは失敗は失敗です。
 
+～～～...調査中...～～～
 
+結果としては、漢字などのコードが不可能で英数字なら書き込めるようです。
+Excelの内容を変更して、書き込んでみたのが次のステップです。
+プログラムに、書き込む内容をつけ足して、Excelもローマ字にしてみました。
 
 ```Python:AutoMypage-Step005
+from selenium import webdriver
+from selenium.webdriver import ChromeOptions
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome import service as fs
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver import Chrome
+from subprocess import CREATE_NO_WINDOW
+
+import time
+import openpyxl
+import pandas as pd
+import xlrd
+import os
+import webbrowser
+
+options = webdriver.ChromeOptions()
+#ヘッドレスモードの場合指定
+#options.add_argument('headless')
+#シークレットモードの場合の指定
+options.add_argument('incognito')
+options.add_experimental_option("excludeSwitches", ['enable-automation']);
+chrome_service = fs.Service(executable_path='./driver/chromedriver.exe')
+chrome_service.creationflags = CREATE_NO_WINDOW
+serv = Service(ChromeDriverManager().install())#driverの自動更新
+driver = webdriver.Chrome(service=serv, options=options)
+wait = WebDriverWait(driver, 10)#タイムアウト時間の設定
+
+def xpath_click(driver,xpath):
+    driver.find_element(By.XPATH, xpath).click()
+    
+def xpath_write(driver,xpath,moji):
+    driver.find_element(By.XPATH, xpath).send_keys(moji)
+    
+#######################################
+#CSVファイルの読み込み
+dirname = os.getcwd()
+df = pd.read_excel('./site.xlsx', sheet_name=["会社", "あなたの情報"],header=0,index_col=0)
+df1 = df["会社"]
+
+company_df =  df["会社"]
+info_df = df["あなたの情報"]
+
+#print(company_df["ホームページ"]["三井ホーム"])
+#print(info_df["あなたの情報"]["名前（上）"])
+
+#######################################
+
+#動画で見やすいように遅延処理
+time.sleep(1)
+driver.get(company_df["アカウント作成"]["三井ホーム"])
+
+time.sleep(1)
+xpath_click(driver,'//*[@id="first_access"]')#
+
+time.sleep(1)
+xpath_click(driver,'/html/body/div[1]/div[3]/div[2]/div[4]/p[1]/a')#
+
+time.sleep(1)
+xpath_write(driver,'/html/body/div[1]/div[3]/div[2]/form/dl/div[2]/dd/span/span[1]/div/div/div/input',info_df["あなたの情報"]["名前（上）"])
+
+time.sleep(1)
+xpath_write(driver,'/html/body/div[1]/div[3]/div[2]/form/dl/div[2]/dd/span/span[2]/div/div/div/input',info_df["あなたの情報"]["名前（下）"])
+
+time.sleep(1)
+xpath_write(driver,'/html/body/div[1]/div[3]/div[2]/form/dl/div[3]/dd/span/span[1]/div/div/div/input',info_df["あなたの情報"]["フリガナ上"])
+
+time.sleep(1)
+xpath_write(driver,'/html/body/div[1]/div[3]/div[2]/form/dl/div[3]/dd/span/span[2]/div/div/div/input',info_df["あなたの情報"]["フリガナ下"])
+
+#終了
+time.sleep(5)
+exit()
 ```
 AutoMypage-Step005の実行結果
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lhZGQiJiW_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+以上の結果から確かに入力ができていることが確認できました。
+しかし、実際にマイページには名前、大学などを選択しなくてはいけない点を考慮したい。
+そうするとローマ字だけでは、可用性や現実性が低い。
+そのため別の施行策を考える。
+
+
+～～～試行中～～～
+
+
+改善案が複数思い付き、それぞれを試した。
+その中でも一番効果がありそうなのは、JavaScriptでFormの内容を置き換えることだ。
+
+
+
+
+
+
 
 ```Python:AutoMypage-Step006
 ```
@@ -346,7 +513,7 @@ AutoMypage-Step007の実行結果
 [bタグとstrongタグの書き方！](https://techacademy.jp/magazine/12592)
 [HTMLでリストを使う方法](https://techacademy.jp/magazine/5712)
 [Qiita Markdown 書き方 まとめ](https://qiita.com/shizuma/items/8616bbe3ebe8ab0b6ca1)
-[]()
+[Qiitaのマークダウンで色をつける方法[140色]](https://qiita.com/twipg/items/d8043cd4681a2780c160)
 []()
 []()
 []()
