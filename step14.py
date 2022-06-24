@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver import ChromeOptions
+from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -9,6 +10,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver import Chrome
 from subprocess import CREATE_NO_WINDOW
+
 
 import time
 import openpyxl
@@ -87,17 +89,21 @@ javascript_textbox_write(driver,Javascript_path,info_df["あなたの情報"]["�
 Javascript_path='document.querySelector("body > div.wrap > div.container.clearfix.formrap > div.contents_area > form > dl > div:nth-child(3) > dd > span > span:nth-child(2) > div > div > div > input")'
 javascript_textbox_write(driver,Javascript_path,info_df["あなたの情報"]["フリガナ（下）"])
 
-'''
-script = """
-    driver.execute_script(script)
-    let element = document.getElementById('myselect');
-    let options = element.options;
-    options[1].selected = true;
-"""
 
-driver.execute_script(script)
-'''
 
+dropdown = driver.find_element(By.XPATH,'//*[@id="ybirth"]')
+select = Select(dropdown)
+ 
+all_options = select.options # 全ての選択肢を取得(list)
+i=0
+for option in all_options:
+    print(option.text) # 選択肢のテキスト
+    print(option.get_attribute('outerHTML')) # HTMLタグ
+    print(option.get_attribute('value')) # value属性の値
+    print('----------------------------')
+    i+=1
+selected = select.all_selected_options # 選択状態にある全ての選択肢を取得
+print(selected[i].text)
 
 time.sleep(5)
 exit()
