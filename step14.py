@@ -103,7 +103,7 @@ for option in all_options:
     print('----------------------------')
     i+=1
 selected = select.all_selected_options # 選択状態にある全ての選択肢を取得
-print(selected[i].text)
+print(selected[i-1].text)
 
 time.sleep(5)
 exit()
